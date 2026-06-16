@@ -25,7 +25,9 @@ public class ContaCpf {
         }
     }
 
-    public void pagar(ContaCpf contaCpf, ContaCpf loja)
+    public void pagar(ContaCpf pagador,ContaCpf recebedor){
+
+    }
 
 
 }
