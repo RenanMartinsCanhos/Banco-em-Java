@@ -1,4 +1,4 @@
-package contaBancaria;
+package PendenciasPagar;
 
 import javax.swing.*;
 import java.time.LocalDate;
@@ -8,6 +8,7 @@ public class PendenciaPagamento {
     private Double valor;
     private Double juros;
     private LocalDate dataVencimento;
+    private int id;
 
     public void gerarPendencia(){
         descricao = JOptionPane.showInputDialog("Digite o descricao da Pendencia");
@@ -15,7 +16,4 @@ public class PendenciaPagamento {
         juros =  Double.parseDouble(JOptionPane.showInputDialog("Digite o juro da Pendencia"));
         dataVencimento = LocalDate.parse(JOptionPane.showInputDialog("Digite o data da Pendencia"));
     }
-
-
-
 }
