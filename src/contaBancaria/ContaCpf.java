@@ -6,6 +6,7 @@ public class ContaCpf {
     private String name = showInputDialog("Digite seu nome: ");
     private int cpf = Integer.parseInt(showInputDialog("Digite seu cpf:"));
     private Double saldo = Double.parseDouble(showInputDialog("Digite seu saldo"));
+    private int id;
 
     public void Transfer(ContaCpf pagador, ContaCpf recebedor) {
         Double transferValue = Double.parseDouble(showInputDialog("Digite o valor que deseja transferir: "));
@@ -30,4 +31,35 @@ public class ContaCpf {
     }
 
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(int cpf) {
+        this.cpf = cpf;
+    }
+
+    public Double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(Double saldo) {
+        this.saldo = saldo;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }
