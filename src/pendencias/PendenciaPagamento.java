@@ -1,4 +1,4 @@
-package pendenciasPagar;
+package pendencias;
 
 import contaBancaria.ContaCpf;
 
@@ -10,22 +10,15 @@ public class PendenciaPagamento {
     private Double valor;
     private Double juros;
     private LocalDate dataVencimento;
-    private String devedor;
     private int id;
 
-    public PendenciaPagamento gerarPendencia(ContaCpf recebedorDaPendencia,PendenciaPagamento pagador) {
-        devedor = recebedorDaPendencia.getName();
-        descricao = JOptionPane.showInputDialog("Digite o descricao da Pendencia");
-        valor = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor da Pendencia"));
-        juros =  Double.parseDouble(JOptionPane.showInputDialog("Digite o juro da Pendencia"));
-        dataVencimento = LocalDate.parse(JOptionPane.showInputDialog("Digite o data da Pendencia"));
+    public void gerarPendencia() {
+        PendenciaPagamento pagador = new PendenciaPagamento();
+        pagador.setDescricao(JOptionPane.showInputDialog("Digite o descricao da Pendencia"));
+        pagador.setValor(Double.parseDouble(JOptionPane.showInputDialog("Digite o valor da Pendencia")));
+        pagador.setJuros(Double.parseDouble(JOptionPane.showInputDialog("Digite o juro da Pendencia")));
+        pagador.setDataVencimento(LocalDate.parse(JOptionPane.showInputDialog("Digite o data da Pendencia")));
 
-        pagador.setDescricao(descricao);
-        pagador.setValor(valor);
-        pagador.setJuros(juros);
-        pagador.setDataVencimento(dataVencimento);
-        pagador.setDevedor(devedor);
-        return pagador;
     }
 
     public String getDescricao() {
@@ -58,14 +51,6 @@ public class PendenciaPagamento {
 
     public void setDataVencimento(LocalDate dataVencimento) {
         this.dataVencimento = dataVencimento;
-    }
-
-    public String getDevedor() {
-        return devedor;
-    }
-
-    public void setDevedor(String devedor) {
-        this.devedor = devedor;
     }
 
     public int getId() {
