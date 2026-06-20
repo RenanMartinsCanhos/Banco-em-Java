@@ -1,5 +1,4 @@
 
-import contaBancaria.ContaCpf;
 import pendencias.PendenciaPagamento;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or

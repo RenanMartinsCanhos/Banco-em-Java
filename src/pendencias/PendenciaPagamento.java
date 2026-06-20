@@ -1,7 +1,5 @@
 package pendencias;
 
-import contaBancaria.ContaCpf;
-
 import javax.swing.*;
 import java.time.LocalDate;
 
@@ -18,7 +16,6 @@ public class PendenciaPagamento {
         pagador.setValor(Double.parseDouble(JOptionPane.showInputDialog("Digite o valor da Pendencia")));
         pagador.setJuros(Double.parseDouble(JOptionPane.showInputDialog("Digite o juro da Pendencia")));
         pagador.setDataVencimento(LocalDate.parse(JOptionPane.showInputDialog("Digite o data da Pendencia")));
-
     }
 
     public String getDescricao() {
