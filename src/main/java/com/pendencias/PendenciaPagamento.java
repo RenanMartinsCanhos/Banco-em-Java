@@ -1,7 +1,8 @@
-package pendencias;
+package com.example.java.pendencias;
 
 import javax.swing.*;
 import java.time.LocalDate;
+
 
 public class PendenciaPagamento {
     private String descricao;

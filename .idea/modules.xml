@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BancoPoo.iml" filepath="$PROJECT_DIR$/BancoPoo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Banco-em-Java.iml" filepath="$PROJECT_DIR$/Banco-em-Java.iml" />
     </modules>
   </component>
 </project>
