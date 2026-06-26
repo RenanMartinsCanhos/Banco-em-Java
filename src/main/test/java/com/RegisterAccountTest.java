@@ -2,6 +2,9 @@ package com;
 
 import com.contaBancaria.ContaBancaria;
 import org.junit.jupiter.api.Test;
+
+import java.time.LocalDate;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class RegisterAccountTest {
@@ -11,7 +14,7 @@ public class RegisterAccountTest {
         ContaBancaria conta = new ContaBancaria();
         String cpf = "54491805865";
 
-        if(cpf.length()== 14){
+        if(cpf.length() <= 14){
             conta.setCpf(cpf);
         }System.out.println("cpf is invalid");
 
