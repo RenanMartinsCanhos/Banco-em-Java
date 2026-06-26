@@ -33,7 +33,7 @@ public class RegisterAccountTest {
         }
         System.out.println("data nascimento is invalid");
 
-    assertEquals(2007-03-31,conta.getDataDeNascimento());
+    assertEqualgis(2007-03-31,conta.getDataDeNascimento());
 }
 
 
