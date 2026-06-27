@@ -1,8 +1,8 @@
-package com.contaBancaria;
+package contabancaria;
 
 
 import javax.swing.*;
-import java.time.LocalDate;
+
 
 public class ContaBancaria {
 
@@ -17,13 +17,11 @@ public class ContaBancaria {
             if(cpf.length() <= 14){
                 conta.setCpf(cpf);
             }System.out.println("cpf is invalid");
-
     }
 
     public void validarDataNascimento(){
         int dataNascimento = 2008-03-31;
     }
-
 
     public int getDataDeNascimento() {
         return dataDeNascimento;
