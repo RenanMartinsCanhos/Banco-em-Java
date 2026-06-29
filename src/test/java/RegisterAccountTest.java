@@ -2,6 +2,8 @@ import contabancaria.ContaBancaria;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDate;
+import java.util.Date;
 
 
 class RegisterAccountTest {
@@ -18,8 +20,6 @@ class RegisterAccountTest {
 
             Assertions.assertEquals("54491805865", conta.getCpf());
         }
-
-
 
     }
 
