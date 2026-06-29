@@ -2,6 +2,7 @@ package contabancaria;
 
 
 import javax.swing.*;
+import java.time.LocalDate;
 
 
 public class ContaBancaria {
@@ -9,7 +10,7 @@ public class ContaBancaria {
     private String cpf;
     private Double saldo;
     private String name;
-    private int dataDeNascimento;
+    private LocalDate dataDeNascimento;
 
     public void validarCpf() {
         ContaBancaria conta = new ContaBancaria();
@@ -23,11 +24,11 @@ public class ContaBancaria {
         int dataNascimento = 2008-03-31;
     }
 
-    public int getDataDeNascimento() {
+    public LocalDate getDataDeNascimento() {
         return dataDeNascimento;
     }
 
-    public void setDataDeNascimento(int dataDeNascimento) {
+    public void setDataDeNascimento(LocalDate dataDeNascimento) {
         this.dataDeNascimento = dataDeNascimento;
     }
 
