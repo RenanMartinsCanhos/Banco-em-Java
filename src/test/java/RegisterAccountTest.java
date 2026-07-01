@@ -3,8 +3,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
-import java.util.Date;
-import java.time.LocalDate;
+import java.util.regex.Pattern;
 
 
 class RegisterAccountTest {
@@ -35,6 +34,19 @@ class RegisterAccountTest {
         }
 
         Assertions.assertEquals(dataNascimento, conta.getDataDeNascimento());
+    }
+
+    @Test
+    void validarNomeDaConta(){
+        ContaBancaria conta = new ContaBancaria();
+        String nome = "12e1efe-";
+
+        if(!nome.matches("^[A-Za-zÀ-ÖØ-öø-ÿ\\s]+$")){
+            conta.setName(nome);
+        } else {
+            System.out.println("nome invalido");
+        }
+        Assertions.assertEquals("12e1efe-", conta.getName());
     }
 }
 
