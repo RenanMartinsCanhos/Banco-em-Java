@@ -1,13 +1,10 @@
 package contabancaria;
 
 
-import lombok.Data;
-
 import javax.swing.*;
 import java.time.LocalDate;
 
 
-@Data
 public class ContaBancaria {
 
     private String cpf;
@@ -15,8 +12,9 @@ public class ContaBancaria {
     private String name;
     private LocalDate dataDeNascimento;
 
+    ContaBancaria conta = new ContaBancaria();
+
     public void validarCpf() {
-        ContaBancaria conta = new ContaBancaria();
         String cpf = JOptionPane.showInputDialog("Write your cpf");
             if(cpf.length() <= 14){
                 conta.setCpf(cpf);
@@ -26,7 +24,6 @@ public class ContaBancaria {
     }
 
     public void validarDataNascimento(){
-        ContaBancaria conta = new ContaBancaria();
         LocalDate dataNascimento = LocalDate.parse(JOptionPane.showInputDialog("Digite sua data de nascimento"));
         int idade = LocalDate.now().getYear() - dataNascimento.getYear();
         if(idade >= 18){
@@ -36,5 +33,44 @@ public class ContaBancaria {
         }
     }
 
+    public void validarNome(){
+        String nome = JOptionPane.showInputDialog("Digite seu nome: ");
+        if(nome.matches("^[A-Za-zÀ-ÖØ-öø-ÿ\\s]+$")){
+            conta.setName(nome);
+        }else{
+            JOptionPane.showMessageDialog(null, "Nome invalido");
+        }
+    }
 
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public Double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(Double saldo) {
+        this.saldo = saldo;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public LocalDate getDataDeNascimento() {
+        return dataDeNascimento;
+    }
+
+    public void setDataDeNascimento(LocalDate dataDeNascimento) {
+        this.dataDeNascimento = dataDeNascimento;
+    }
 }

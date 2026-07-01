@@ -39,14 +39,14 @@ class RegisterAccountTest {
     @Test
     void validarNomeDaConta(){
         ContaBancaria conta = new ContaBancaria();
-        String nome = "12e1efe-";
+        String nome = "Renan";
 
-        if(!nome.matches("^[A-Za-zÀ-ÖØ-öø-ÿ\\s]+$")){
+        if(nome.matches("^[A-Za-zÀ-ÖØ-öø-ÿ\\s]+$")){
             conta.setName(nome);
         } else {
             System.out.println("nome invalido");
         }
-        Assertions.assertEquals("12e1efe-", conta.getName());
+        Assertions.assertEquals("Renan", conta.getName());
     }
 }
 
