@@ -10,17 +10,18 @@ import java.time.LocalDate;
 class RegisterAccountTest {
 
     @Test
-        void validarCpfDaConta() {
-            ContaBancaria conta = new ContaBancaria();
-            String cpf = "54491805865";
+    void validarCpfDaConta() {
+        ContaBancaria conta = new ContaBancaria();
+        String cpf = "54491805865";
 
-            if (cpf.length() <= 14) {
-                conta.setCpf(cpf);
-            }
-            System.out.println("cpf is invalid");
-
-            Assertions.assertEquals("54491805865", conta.getCpf());
+        if (cpf.length() <= 14) {
+            conta.setCpf(cpf);
         }
+        System.out.println("cpf is invalid");
+
+        Assertions.assertEquals("54491805865", conta.getCpf());
+    }
+
     @Test
     void validarDataNascimentoDaConta() {
         ContaBancaria conta = new ContaBancaria();
@@ -37,5 +38,6 @@ class RegisterAccountTest {
     }
 }
 
-    }
+
+
 
