@@ -21,7 +21,8 @@ public class ContaBancaria {
     }
 
     public void validarDataNascimento(){
-        int dataNascimento = 2008-03-31;
+        ContaBancaria conta = new ContaBancaria();
+        LocalDate dataNascimento = LocalDate.ofYearDay(LocalDate.parse(JOptionPane.showInputDialog(null,"Digite sua data de nascimento")));
     }
 
     public LocalDate getDataDeNascimento() {
